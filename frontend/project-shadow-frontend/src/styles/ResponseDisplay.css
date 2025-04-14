@@ -1,0 +1,142 @@
+.response-container {
+    flex: 1;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 1.5rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .response-container h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .response-content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .response-content pre {
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .sources {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .sources h4 {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+  
+  .sources ul {
+    list-style-type: none;
+  }
+  
+  .sources li {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    padding: 0.2rem 0;
+  }
+  
+  /* Loading state */
+  .loading {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .circle {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: var(--highlight-color);
+    animation: bounce 1.4s infinite ease-in-out both;
+  }
+  
+  .circle:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+  
+  .circle:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+  
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Error state */
+  .error {
+    border-left: 4px solid var(--error-color);
+  }
+  
+  .error h3 {
+    color: var(--error-color);
+  }
+  
+  /* Denied state */
+  .denied {
+    border-left: 4px solid var(--warning-color);
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .denied h3 {
+    color: var(--warning-color);
+  }
+  
+  .denied-icon {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+  
+  /* Not found state */
+  .not-found {
+    border-left: 4px solid var(--accent-color);
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Success state */
+  .success {
+    border-left: 4px solid var(--success-color);
+  }
+  
+  .success h3 {
+    color: var(--success-color);
+  }
